@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('hh.jpg'); /* Ensure the image path is correct */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: #004d99;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        p {
+            color: #fff;
+            margin: 10px 0;
+            line-height: 1.6;
+            max-width: 600px;
+            text-align: justify;
+        }
+        button {
+            background-color: #004d99;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+        .navbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .navbar-icon {
+            width: 30px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .navbar-icon span {
+            display: block;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .navbar-menu {
+            display: none;
+            flex-direction: column;
+            background-color: rgba(0, 77, 153, 0.9);
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            text-align: right;
+        }
+        .navbar-menu a:hover {
+            background-color: #003366;
+        }
+        .navbar-icon:hover + .navbar-menu, .navbar-icon:focus + .navbar-menu {
+            display: flex;
+        }
+        /* Toolbar styles */
+        .toolbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #d3d3d3; /* Slightly darker */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            color: black;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .toolbar .logo {
+            width: 70px; /* Larger size */
+            height: 70px; /* Larger size */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <img src="logo.jpg" alt="Logo" class="logo"> <!-- Replace with your logo image path -->
+    </div>
+    <div class="navbar">
+        <div class="navbar-icon" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <h1><b>Welcome to Excellent Travel Agency</b></h1>
+    <p>
+       ከአምስት ዓመታት በላይ ድርጅታችን ግለሰቦች በውጭ ሀገር የመሥራትና የመማር ምኞታቸውን እንዲያሳኩ ስንረዳ ቆይተናል። በጠንካራ የስኬት ታሪክ፣ በዓለም ዙሪያ በሚገኙ የተለያዩ መዳረሻዎች የስራ እና የትምህርት  ቪዛ በፈጣን እና ቀላል አገልግሎታችን ብዙዎችን ከህልማቸው አድርሰናል።
+በዓለም አቀፍ የስራ ልምድ ስራችሁን ለማጎልበት እየፈለጋችኁም ይሁን በታወቁ የትምህርት ተቋማት ውስጥ  የላቀ የትምህርት ደረጃ ለመከታተል የምትፈልጉ፣  የቪዛ ፍላጎትዎን በጥንቃቄ እናከናውናለን።
+
+በተጨማሪም ወደ ብሩህ የወደፊት ሕይወት የምታደርጉት ጉዞ ርካሽና በቀላሉ ሊደረስበት የሚችል እንዲሆን ለማድረግ ተመጣጣኝ ዋጋ በማቅረባችን እንኮራለን ።
+    </p>
+    <button onclick="window.location.href='option.html'">Continue</button>
+</body>
+</html>

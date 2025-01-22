@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfdfe; /* broken white */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        h1 {
+            color: #000000; /* black */
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 2.5em; /* nice big size */
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .option {
+            text-align: center;
+        }
+
+        .option img {
+            width: 100px;
+            height: 100px;
+            background-color: #eee; /* Light grey placeholder background */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .option img:hover {
+            background-color: #ddd; /* Darker grey when hovered */
+        }
+
+        .option p {
+            color: #ffd700; /* light gold */
+            margin: 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select a Country</h1>
+    <div class="options">
+        <div class="option" onclick="location.href='canada.html'">
+            <img src="canada.jpg" alt="Canada">
+            <p>Canada</p>
+        </div>
+        <div class="option" onclick="location.href='usa.html'">
+            <img src="usa.jpg" alt="USA">
+            <p>USA</p>
+        </div>
+        <div class="option" onclick="location.href='uae.html'">
+            <img src="uae.jpg" alt="UAE">
+            <p>UAE</p>
+        </div>
+        <div class="option" onclick="location.href='england.html'">
+            <img src="england.jpg" alt="England">
+            <p>England</p>
+        </div>
+        <div class="option" onclick="location.href='germany.html'">
+            <img src="germany.jpg" alt="Germany">
+            <p>Germany</p>
+        </div>
+        <div class="option" onclick="location.href='italy.html'">
+            <img src="italy.jpg" alt="Italy">
+            <p>Italy</p>
+        </div>
+        <div class="option" onclick="location.href='china.html'">
+            <img src="china.jpg" alt="China">
+            <p>China</p>
+        </div>
+        <div class="option" onclick="location.href='france.html'">
+            <img src="france.jpg" alt="France">
+            <p>France</p>
+        </div>
+    </div>
+</body>
+</html>

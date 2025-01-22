@@ -1,0 +1,189 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Germany Registration Form</title>
+<style>
+    /* Your existing CSS styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa; /* light grey */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2 {
+        color: #343a40; /* dark grey */
+        text-align: center;
+        margin-top: 20px;
+    }
+    form {
+        background-color: #ffffff; /* white */
+        border: 1px solid #004d99;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 90%;
+        margin: 20px 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    form:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+    label {
+        color: #004d99; /* grey */
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    input[type="file"],
+    input[type="date"],
+    input[type="radio"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px 0;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    input[type="file"]:focus,
+    input[type="date"]:focus,
+    input[type="radio"]:focus {
+        border-color: #343a40; /* dark grey */
+        outline: none;
+    }
+    button[type="submit"],
+    button[type="button"] {
+        background-color: #137dc5; /* bright blue */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        margin-top: 10px;
+    }
+    button[type="submit"]:hover,
+    button[type="button"]:hover {
+        background-color: #0056b3; /* darker blue */
+        transform: translateY(-3px);
+    }
+    @media (max-width: 768px) {
+        form {
+            width: 95%;
+        }
+    }
+    .fingerprint-pad {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .fingerprint-pad img {
+        width: 80px; /* Circular shape */
+        height: 80px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin-bottom: 10px;
+        background-image: url('path/to/your/fingerprint-image.jpg'); /* Replace with your realistic fingerprint image */
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%; /* Circular shape */
+    }
+    .fingerprint-pad img:hover {
+        transform: scale(1.1); /* slightly larger on hover */
+    }
+    .fingerprint-status {
+        color: #28a745; /* green for success */
+        font-weight: bold;
+        display: none; /* initially hidden */
+    }
+</style>
+</head>
+<body>
+    <header></header>
+    <h2>Germany Registration Form</h2>
+    <form action="https://formspree.io/f/xkggdvvj"method="post">
+        <!-- Your existing form fields -->
+        <label for="fullname">Full Name / ሙሉ ስም*:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="full name" required><br><br>
+        <label for="sex">Sex / ፆታ*:</label><br>
+        <select id="sex" name="sex" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+        <label for="age">Age / እድሜ*:</label><br>
+        <input type="number" id="age" name="age" placeholder="Age" required><br><br>
+        <label for="email">Email / ኢ-ሜይል*:</label><br>
+        <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+        <label for="height">Height / ቁመት*:</label><br>
+        <input type="number" id="height" name="height" placeholder="Height (cm)" required><br><br>
+        <label for="birthdate">Birth Date / የትውልድ ቀን*:</label><br>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+        <label for="nationality">Nationality / ዜግነት*:</label><br>
+        <input type="text" id="nationality" name="nationality" placeholder="Nationality" required><br><br>
+        <label for="applicationdate">Application Date / ፎርሙን የሞሉበት ቀን*:</label><br>
+        <input type="date" id="applicationdate" name="applicationdate" required><br><br>
+        <label for="phone">Phone Number / ስልክ ቁጥር*:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br><br>
+        <label for="photo">Photo / ፎቶ ያስገቡ*:</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+        <label for="passport">Do you have a passport? / ፓስፖርት አለዎት?*</label><br>
+        <select id="passport" name="passport" required>
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+        <label for="education">Education Level / የትምህርት ደርጃ*:</label><br>
+        <select id="education" name="education" required>
+            <option value="">Select your education level</option>
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">Ph.D.</option>
+        </select><br><br>
+        <label for="fingerprint">Fingerprint / ጣቶን ለ 3 ሰከንድ በ ምልክቱ ስር ያርጉ*:</label>
+        <div class="fingerprint-pad" id="fingerprint-pad">
+            <img src="print.jpg" alt="Fingerprint Button" id="fingerprint-button">
+            <span class="fingerprint-status" id="fingerprint-status">Fingerprint captured successfully!</span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const fingerprintButton = document.getElementById("fingerprint-button");
+        const fingerprintStatus = document.getElementById("fingerprint-status");
+        const registrationForm = document.getElementById("registration-form");
+
+        fingerprintButton.addEventListener("click", function() {
+            setTimeout(function() {
+                fingerprintStatus.style.display = "block";
+            }, 3000); // 3 seconds delay
+        });
+
+        registrationForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Add any form validation or processing logic here
+            // Redirect to the success page
+            window.location.href = "success.html"; // Update the URL as needed
+        });
+    </script>
+<p>© 2025 excellent agency All rights reserved</p>
+</body>
+</html>
